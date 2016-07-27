@@ -6,10 +6,11 @@
 
 	  <properties resource="application.properties"/>
 		
+    <!--指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean,每一个在包 domain.blog 中的 Java Bean，在没有注解的情况下，会使用 Bean 的首字母小写的非限定类名来作为它的别名。 比如 domain.blog.Author 的别名为 author；若有注解，则别名为其注解值。-->
 	  <typeAliases>
 	  	<package name="com.mybatis3.domain"/>
 	  </typeAliases>
-	
+
 	  <environments default="development">
 	    <environment id="development">
 	      <transactionManager type="JDBC"/>

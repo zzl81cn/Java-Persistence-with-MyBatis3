@@ -18,7 +18,10 @@
     <select id="findAllStudents" resultMap="StudentResult">
         SELECT * FROM Students
     </select>
-  	
+
+    <!--利用mybatis-config.xml 的配置，可以不用输入类的全路径而自动对应-->
+    <!--在没有注解的情况下，会使用 Bean 的首字母小写的非限定类名来作为它的别名。 比如 domain.blog.Author 的别名为 author；若有注解，则别名为其注解值。-->
+    <!--这种情况下,MyBatis 会在幕后自动创建一个 ResultMap,基于属性名来映射列到 JavaBean 的属性上。如果列名没有精确匹配,你可以在列名上使用 select 字句的别名(一个 基本的 SQL 特性)来匹配标签。-->
   	<select id="findStudentById" parameterType="int" resultType="Student">
     	select stud_id as studId, name, email, dob from Students where stud_id=#{studId}
   	</select>

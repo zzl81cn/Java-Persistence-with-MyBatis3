@@ -12,9 +12,12 @@
 		<result property="dob" column="dob"/>
 	</resultMap>
   
-  	<select id="findAllStudents" resultMap="StudentResult">
-    	select * from Students
-  	</select>
+  	<!--<select id="findAllStudents" resultMap="StudentResult">-->
+    	<!--select * from Students-->
+  	<!--</select>-->
+    <select id="findAllStudents" resultMap="StudentResult">
+        SELECT * FROM Students
+    </select>
   	
   	<select id="findStudentById" parameterType="int" resultType="Student">
     	select stud_id as studId, name, email, dob from Students where stud_id=#{studId}

@@ -22,12 +22,12 @@ public class Student
 		this.studId = studId;
 	}
 	
-	public Student(Integer studId, String name, String email, Date dob) {
-		this.studId = studId;
-		this.name = name;
-		this.email = email;
-		this.dob = dob;
-	}
+    public Student(Integer studId,String name, String email, Date dob) {
+        this.studId = studId;
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+    }
 
 	@Override
 	public String toString() {
